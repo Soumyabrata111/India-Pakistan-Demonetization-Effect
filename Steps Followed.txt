@@ -1,0 +1,27 @@
+The code aims to test whether the Indian demonetization event had a significant impact on the economic indicators of Pakistan or not. The null hypothesis is that there is no significant difference in the economic indicators of Pakistan before and after the Indian demonetization event, while the alternative hypothesis is that the Indian demonetization event had a significant impact on the economic indicators of Pakistan, either positive or negative.
+
+To achieve this, the code uses the following steps:
+
+Step 1: Importing the Required Libraries
+
+The code starts by importing the required libraries such as pandas, scipy.stats, matplotlib.pyplot, and seaborn. Pandas is used to read and manipulate the CSV files, while scipy.stats is used to perform statistical tests. Matplotlib.pyplot and seaborn are used for data visualization.
+
+Step 2: Reading the Data
+
+The code reads two CSV files, namely CG_DEBT_GDP_Pak.csv and PPPPC_Pak.csv, using the read_csv function from the pandas library. The data from both CSV files is stored in two separate data frames, namely CG_DEBT_GDP_Pak and PPPPC_Pak.
+
+Step 3: Merging the Data
+
+The data frames CG_DEBT_GDP_Pak and PPPPC_Pak are merged based on the 'Year' column using the merge function from the pandas library. The merged data frame is stored in the 'df' variable.
+
+Step 4: Testing Normality and Equal Variance
+
+The code tests for normality using the Shapiro-Wilk test for each column of the 'df' data frame. The code also tests for equal variance between the two groups using Levene's test.
+
+Step 5: Performing Statistical Tests
+
+The code performs the two-sample t-test for each column of the 'df' data frame. It also performs the Wilcoxon rank-sum test for the 'CG_DEBT_GDP_Pak' column. These tests help to determine whether there is a significant difference between the economic indicators of Pakistan before and after the Indian demonetization event.
+
+Step 6: Creating Line Plots
+
+Finally, the code creates two line plots using the matplotlib.pyplot and seaborn libraries. One line plot is created for the 'CG_DEBT_GDP_Pak' column, while the other is created for the 'PPPPC_Pak' column. The line plot for the 'CG_DEBT_GDP_Pak' column includes a vertical line at the year 2016, which represents the Indian demonetization event.
